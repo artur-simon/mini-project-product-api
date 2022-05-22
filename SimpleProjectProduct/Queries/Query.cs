@@ -3,9 +3,9 @@ using SimpleProjectProduct.Models;
 
 namespace SimpleProjectProduct.Queries;
 
-public class RetrieveQuery : ObjectGraphType
+public class Query : ObjectGraphType
 {
-  public RetrieveQuery()
+  public Query()
   {
     Field<ListGraphType<ProductType>>("product", resolve: context => new List<Product> {
       new Product { Estoque = 321, Nome = "Helloo", Preco = 3.75},
