@@ -1,18 +1,18 @@
 using GraphQL.Types;
 
-namespace SimpleProjectProduct.Models{
-    public class ProductType : ObjectGraphType<Product>
+namespace SimpleProjectProduct.Models;
+
+public class ProductType : ObjectGraphType<Product>
+    {
+        public ProductType()
         {
-            public ProductType()
-            {
-                Name = "Product";
-                
-                Field(x => x.CodigoBarras).Description("Código de Barras");
+            Name = "Product";
+            
+            Field(x => x.Estoque).Description("Estoque");
 
-                Field(x => x.Nome).Description("Nome do produto");
+            Field(x => x.Nome).Description("Nome do produto");
 
-                Field(x => x.Preco).Description("Preço");
+            Field(x => x.Preco).Description("Preço");
 
-            }
         }
-}
+    }
