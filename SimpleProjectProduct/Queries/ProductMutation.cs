@@ -2,6 +2,8 @@
 using SimpleProjectProduct.Models;
 using SimpleProjectProduct.Models.Input;
 using SimpleProjectProduct.Services;
+using SimpleProjectProduct.Data;
+using GraphQL;
 using GraphQL.Types;
 using System;
 using System.Collections.Generic;
@@ -11,9 +13,15 @@ using System.Threading.Tasks;
 namespace SimpleProjectProduct.Queries;
 public class ProductMutation : ObjectGraphType
 {
-    private readonly IService.IProductService _productService = null;
-    public ProductMutation(IService.IProductService productService)
+    public ProductMutation(ProductData data)
     {
-        _productService = productService;
+        Field<ProductType>(
+            "createProduct",
+            arguments: new QueryArguments(new QueryArgument<NonNullGraphType<ProductType>> {}),
+            resolve: context =>
+            {
+                var product = context.GetArgument<Product>("id");
+                return data.AddProduct(product);
+            });
     }
 }
