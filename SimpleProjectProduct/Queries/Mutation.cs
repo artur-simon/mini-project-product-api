@@ -11,8 +11,8 @@ namespace SimpleProjectProduct.Queries;
 public class Mutation
 {
     private readonly IService.IProductService _productService = null;
-    public Mutation(IService.IProductService numbersService)
+    public Mutation(IService.IProductService productService)
     {
-        _productService = numbersService;
+        _productService = productService;
     }
 }

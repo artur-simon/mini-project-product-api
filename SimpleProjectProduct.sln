@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleProjectProduct", "SimpleProjectProductApi\SimpleProjectProduct.csproj", "{6205D929-1CD3-4073-A813-F315B969F28E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleProjectProduct", "SimpleProjectProduct\SimpleProjectProduct.csproj", "{6205D929-1CD3-4073-A813-F315B969F28E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleProjectProductApi_Test", "SimpleProjectProductApi_Test\SimpleProjectProductApi_Test.csproj", "{33A1103F-69B6-4521-B90C-DD9BD8365E25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleProjectProductApi_Test", "SimpleProjectProduct_Test\SimpleProjectProductApi_Test.csproj", "{33A1103F-69B6-4521-B90C-DD9BD8365E25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

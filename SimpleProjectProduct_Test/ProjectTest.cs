@@ -1,10 +1,10 @@
-using AspnetCore_GraphQL.Services;
+using SimpleProjectProduct.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AspNetcore_GraphQl_Tests
+namespace SimpleProjectProduct_Test
 {
     [TestClass]
     public class ProjectTest
