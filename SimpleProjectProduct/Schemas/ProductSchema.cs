@@ -7,6 +7,6 @@ public class ProductSchema : Schema
 {
     public ProductSchema(IServiceProvider serviceProvider) : base(serviceProvider)
     {
-        Query = serviceProvider.GetRequiredService<RetrieveQuery>();
+        Query = serviceProvider.GetRequiredService<Query>();
     }
 }
