@@ -5,8 +5,9 @@ namespace SimpleProjectProduct.Schemas;
 
 public class ProductSchema : Schema
 {
-    public ProductSchema(IServiceProvider serviceProvider) : base(serviceProvider)
+    public ProductSchema(IServiceProvider provider) : base(provider)
     {
-        Query = serviceProvider.GetRequiredService<Query>();
+        Query = provider.GetRequiredService<ProductQuery>();
+        Mutation  = provider.GetRequiredService<ProductMutation>();
     }
 }
