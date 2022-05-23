@@ -37,6 +37,7 @@ public class ProductMutation : ObjectGraphType
         Field<ProductType>(
             "edit",
             arguments: new QueryArguments(
+                    new QueryArgument<NonNullGraphType<IntGraphType>> { Name = "estoque" },
                     new QueryArgument<IntGraphType> { Name = "estoque" },
                     new QueryArgument<StringGraphType> { Name = "nome" },
                     new QueryArgument<FloatGraphType> { Name = "preco" }
