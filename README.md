@@ -4,6 +4,10 @@ This is a simple project using NET.Core EntityFramework and GraphQl to enable an
 
 I took a code-first approach, so the DB should be configured to reflect the given context.
 
+GraphQL.NET SDK uses the builder pattern to configure the required GraphQL services.
+
+Used the repository pattern to decouple individual components and adhere to the Single Responsibility Principle (SRP).
+
 # Installing and running
 
 clone repository

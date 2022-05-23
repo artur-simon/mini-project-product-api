@@ -6,11 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using SimpleProjectProduct.Repository;
 
 namespace SimpleProjectProduct.Queries;
 public class ProductMutation : ObjectGraphType
 {
-    public ProductMutation()
+    public ProductMutation(IRepository repository)
     {
         Field<ProductType>(
             "create",
@@ -26,12 +27,10 @@ public class ProductMutation : ObjectGraphType
                     var preco = context.GetArgument<double>("preco");
                     Product product = new Product { Estoque = estoque, Nome = nome, Preco = preco };
 
-                    var productContext = context.RequestServices.GetRequiredService<ProductContext>();
-                    productContext.Products.Add(product);
-                    productContext.SaveChanges();
-                    return product;
+                    return repository.AddItem(product);
                 }
         );
+
         Field<ProductType>(
             "edit",
             arguments: new QueryArguments(
@@ -58,6 +57,7 @@ public class ProductMutation : ObjectGraphType
                     return product;
                 }
         );
+
         Field<ProductType>(
             "delete",
             arguments: new QueryArguments(
