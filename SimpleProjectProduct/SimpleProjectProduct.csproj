@@ -7,20 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="App.Debug.config">
-        <DependentUpon>App.config</DependentUpon>
-    </None>
-    <None Include="App.Release.config">
-        <DependentUpon>App.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <Target Name="SetAppConfig" BeforeTargets="Compile">
-      <Copy SourceFiles="App.Debug.config" DestinationFiles="App.config" OverwriteReadOnlyFiles="true" Condition=" '$(Configuration)' == 'Debug' " />
-      <Copy SourceFiles="App.Release.config" DestinationFiles="App.config" OverwriteReadOnlyFiles="true" Condition=" '$(Configuration)' == 'Release' " />
-  </Target>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />

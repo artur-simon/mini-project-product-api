@@ -23,6 +23,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 // make sure all our schemas registered to route
-app.UseGraphQL<ISchema>();
+app.UseGraphQL<ISchema>().UseGraphQLAltair();
 
 app.Run();
