@@ -12,7 +12,7 @@ public interface IProductService
 {
     IQueryable<Product> getAll();
     IQueryable<Product> getByFilter(ProductInput input);
-    void create(ProductInput input);
+    Product create(Product input);
     void delete(ProductInput input);
     void update(ProductInput input);
 }

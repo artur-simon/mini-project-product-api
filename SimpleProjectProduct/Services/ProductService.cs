@@ -13,9 +13,11 @@ public class ProductService : IProductService
     private IList<Product> _product;
     public ProductService() { _product = new List<Product>(); }
 
-    public void create(ProductInput input)
+    public Product create(Product input)
     {
-        throw new NotImplementedException();
+        input.Id = new Random().Next();
+        _product.Add(input);
+        return input;
     }
 
     public void delete(ProductInput input)
