@@ -1,6 +1,13 @@
 # mini-project-product-api
 
-This is a simple project using NET.Core EntityFramework and GraphQl to enable an API with CRUD functionalities.
+Avaliable on `https://simpleprojectproductapi.herokuapp.com/`
+
+Requests can be made to the following endpoint:
+`https://simpleprojectproductapi.herokuapp.com/graphql`
+
+This is a simple project using NET.Core EntityFramework and GraphQl to enable an API
+
+that is able to fully CRUD.
 
 I took a code-first approach, so the DB should be configured to reflect the given context.
 
@@ -16,7 +23,7 @@ install framework
 
 `dotnet restore`
 
-execute a migration command using in the project folder
+edit .appsetings' ConnectionStrings to reflect the local MSSQL, execute a migration command in the project folder
 
 `dotnet ef database update`
 
