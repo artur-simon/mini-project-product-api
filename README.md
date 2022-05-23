@@ -42,4 +42,20 @@ Create:
   create(nome: "Green Fruits", preco: 1.2, estoque : 123) {
       id
   }
+}`
+
+Edit:
+`mutation {
+  edit(id: 12, nome: "Green Fruits", preco: 1.2, estoque : 123) {
+      nome,
+      preco,
+      estoque
+  }
+}`
+
+Delete:
+`mutation {
+  delete(id: 12) {
+      id
+  }
 }` 
