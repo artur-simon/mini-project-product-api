@@ -3,6 +3,8 @@ using GraphQL.MicrosoftDI;
 using GraphQL.Server;
 using GraphQL.SystemTextJson;
 using GraphQL.Types;
+using SimpleProjectProduct.EntityFramework;
+using Microsoft.EntityFrameworkCore;
 using SimpleProjectProduct.Schemas;
 
 
@@ -14,6 +16,7 @@ builder.Services.AddSingleton<ISchema, ProductSchema>(services => new ProductSch
 // register graphQL
 builder.Services.AddGraphQL(options => { options.EnableMetrics = true;}).AddSystemTextJson();
 builder.Services.AddControllers();
+builder.Services.AddDbContext<ProductContext>( options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
 var app = builder.Build();
 app.UseHttpsRedirection();
