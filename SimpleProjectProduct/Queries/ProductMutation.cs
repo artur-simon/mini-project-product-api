@@ -43,9 +43,9 @@ public class ProductMutation : ObjectGraphType
                 resolve: context =>
                 {
                     var id = context.GetArgument<int>("id");
-                    int? estoque = context.GetArgument<int>("estoque");
+                    int? estoque = context.GetArgument<int?>("estoque", defaultValue:null);
                     String nome = context.GetArgument<string>("nome");
-                    double? preco = context.GetArgument<double>("preco");
+                    double? preco = context.GetArgument<double?>("preco", defaultValue:null);
 
                     var productContext = context.RequestServices.GetRequiredService<ProductContext>();
                     var product = productContext.Products.Find(id);
