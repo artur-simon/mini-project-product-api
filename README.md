@@ -1,10 +1,5 @@
 # mini-project-product-api
 
-Avaliable on `https://simpleprojectproductapi.herokuapp.com/`
-
-Requests can be made to the following endpoint:
-`https://simpleprojectproductapi.herokuapp.com/graphql`
-
 This is a simple project using NET.Core EntityFramework and GraphQl to enable an API with CRUD functionalities.
 
 I took a code-first approach, so the DB should be configured to reflect the given context.
