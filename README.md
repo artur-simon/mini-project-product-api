@@ -1,6 +1,7 @@
 # mini-project-product-api
 
-Avaliable on `https://simpleprojectproductapi.herokuapp.com/` \n
+Avaliable on `https://simpleprojectproductapi.herokuapp.com/`
+
 Requests can be made to the following endpoint:
 `https://simpleprojectproductapi.herokuapp.com/graphql`
 
