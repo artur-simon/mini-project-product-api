@@ -6,7 +6,9 @@ I took a code-first approach, so the DB should be configured to reflect the give
 
 GraphQL.NET SDK uses the builder pattern to configure the required GraphQL services.
 
-Used the repository pattern to decouple individual components and adhere to the Single Responsibility Principle (SRP).
+I intented on making a repository layer to decouple the database but found this
+`https://pt.stackoverflow.com/questions/51536/quando-usar-entity-framework-com-repository-pattern`
+and so i took it back.
 
 # Installing and running
 
