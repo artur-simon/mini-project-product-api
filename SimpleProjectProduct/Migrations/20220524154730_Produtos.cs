@@ -4,7 +4,7 @@
 
 namespace SimpleProjectProduct.Migrations
 {
-    public partial class ProductDb : Migration
+    public partial class Produtos : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -21,6 +21,18 @@ namespace SimpleProjectProduct.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "Id", "Estoque", "Nome", "Preco" },
+                values: new object[,]
+                {
+                    { 1, 321, "Helloo", 3.75 },
+                    { 2, 2131, "Hello World! How are you?", 897.0 },
+                    { 3, 78678, "Hello World!", 124.22 },
+                    { 4, 65, "How are you?", 5678.0 },
+                    { 5, 667, "Are you?", 1.99 }
                 });
         }
 
