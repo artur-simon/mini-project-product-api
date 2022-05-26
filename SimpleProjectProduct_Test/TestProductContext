@@ -1,0 +1,16 @@
+using System;
+using Microsoft.EntityFrameworkCore;
+using SimpleProjectProduct.EntityFramework;
+using SimpleProjectProduct.Models;
+
+namespace SimpleProjectProduct_Test
+{
+    public class TestStoreAppContext : ProductContext
+    {
+        public TestStoreAppContext(DbContextOptions options) : base(options)
+        {
+            this.Products = new TestProductDbSet();
+        }
+        public void MarkAsModified(Product item) { Entry(item).State = EntityState.Modified; }
+    }
+}

@@ -1,13 +1,12 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using GraphQL;
+using SimpleProjectProduct.Models;
 
-namespace SimpleProjectProduct_Test
-{
-    [TestClass]
-    public class ProjectTest
-    {
-        
+namespace SimpleProjectProduct_Test;
+public class ProjectTest
+{ 
+
+    Product novoProduto()
+        {
+            return new Product() { Estoque = 3, Nome = "Demo name", Preco = 5 };
+        }
     }
-}
